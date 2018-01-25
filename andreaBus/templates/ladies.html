@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+{% cms_toolbar %}
+{% block content %}
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>Project for Interactive and Responsive Client side Web Development</title>
+	<script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+	<script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	<meta http-equi="Content-Type" content="text/html; charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="andrea fashion collection mse natasha online store">
+	<meta name="keywords" content="andrea, fashion, mse, natasha, blouse, tops, pants, shoes, shirts, baby clothes, bags, accesories">
+	<link href="andrea.css" rel="stylesheet" type="text/css" />
+</head>
+	<header>
+		<div style="text-align: center;"><a href="andrea.html"><img id="logo" style="text-align: center" src="LogoforAndreaFinal.png" alt="logo of the store"></a></div>
+	</header>
+		<div id="nabigasyon" style="text-align: center">
+			<nav>
+				<ul>
+					<li id="frontPage"><a href="andrea.html">FRONT PAGE  </a></li>
+					<li id="Ladies"><a href="ladiesGallery.html">LADIES  </a></li>
+					<li id="Mens"><a href="mensGallery.html">MEN  </a></li>
+					<li id="Children"><a href="childrenGallery.html">CHILDREN  </a></li>
+					<li id="Accesories"><a href="accesories.html">ACCESORIES  </a></li>
+					<li id="HomeWare"><a href="homeGallery.html">HOME PRODUCTS  </a></li>
+				</ul>
+			 </nav>
+		</div>
+
+	<div id="ladiesContainer">
+	<figure id="ladiesBlousePic">
+		<img class="ladiespic" src="MellisaBlouse.jpg" alt="blouse" width="150" height="208"/>
+		<img class="ladiespic" src="MIRANDA_b.jpg" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="MoiraBlouse.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="NADIA_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="NICOLE_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="RICHELLE_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="SHANINA_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="MIMI_b.JPG" alt="Long white dress" width="150" height="208"/>
+		<img class="ladiespic" src="MILDRED_b.JPG" alt="G tshirt blouse with black check" width="150" height="208"/>
+		<img class="ladiespic" src="MEAGANJADE_b.JPG" alt="Blue blouse threefourth" width="150" height="208"/>
+		<img class="ladiespic" src="MAGGIE_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="TESSIE_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="VANITY_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="MAELETH_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="MARCIA_b.JPG" alt="Checkered blouse" width="150" height="208"/>
+		<img class="ladiespic" src="MARCELLE_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="VERONA_b.JPG" alt="blouse picture" width="150" height="208"/>
+		<img class="ladiespic" src="VICTORIA_b.JPG" alt="Checkered blouse" width="150" height="208"/>
+		<img class="ladiespic" src="VERA_b.JPG" alt="Checkered blouse" width="150" height="208"/>
+		<img class="ladiespic" src="TAYLORBELLE_b.JPG" alt="Checkered blouse" width="150" height="208"/>
+	</figure>
+	</div>
+
+</html>
+{% endblock content %}

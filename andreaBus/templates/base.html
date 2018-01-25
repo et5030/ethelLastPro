@@ -1,0 +1,321 @@
+{% load cms_tags menu_tags sekizai_tags static %}
+<!DOCTYPE html>
+<html lang="{{LANGUAGE_CODE}}">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{% page_attribute 'meta_description' %}">
+    <meta name="author" content="Ethel Tacuyan">
+
+    <title>"{% page_attribute 'page_title' %}" - Andrea Fashion Collection</title>
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+        <!-- Custom styles for this carousel-->
+    <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+    <link href="{% static 'css/stylish-portfolio.min.css' %}" rel="stylesheet">
+    <link href="{% static ' css/half-slider.css' %}" rel="stylesheet">
+    <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
+
+    {% render_block "css" %}
+  </head>
+
+  <body>
+    {% cms_toolbar %}
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+       <a class="navbar-brand" href="/"><img src="{% static 'logoAndreaNew.png' %}" width="300px" height="100px" alt="Logo of Company"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html"></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="http://natasha.ph/about.asp" target="_blank">Abot Andrea</a>
+                <a class="dropdown-item" href="http://natasha.ph/about.asp" target="_blank">About Natasha</a>
+                <a class="dropdown-item" href="http://mse.com.ph/about.asp" target="_blank">About MSE</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Catalogs
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item" href="http://natasha.ph/012018.asp" target="_blank">Natasha Catalog</a>
+                <a class="dropdown-item" href="http://mse.com.ph/022018.asp" target="_blank">MSE Catalog</a>
+                <a class="dropdown-item" href="blog-post.html"></a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Marketing Scheme
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                <a class="dropdown-item active" href="https://www.youtube.com/watch?v=BKpBfD1foQ0" target="_blank">Natasha Direct Selling</a>
+                <a class="dropdown-item" href="http://mse.com.ph/about.asp" target="_blank">Marikina Shoe Exchange Wholesale</a>
+                <a class="dropdown-item" href="http://natasha.ph/productlist.asp" target="_blank">Product List and Name of Products</a>
+                <a class="dropdown-item" href="404.html"></a>
+                <a class="dropdown-item" href="pricing.html"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+    <!-- Call to Action -->
+      <div class="overlay" class="call-to-action text-white text-center"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-l-9 mx-auto"><br>
+            <h6 class="mb-4" style="color:red">Ready to be a Dealer? Sign up now!</h6>
+          </div>
+          <div class="col-md-10 col-lg-8 col-l-7 mx-auto">
+            <form>
+              <div class="form-row">
+                <div class="col-12 col-md-9 mb-2 mb-md-0"><br>
+                  <input type="email" class="form-control form-control" placeholder="Enter your email and we will contact you ...">
+                </div>
+                <div class="col-12 col-md-3"><br>
+                  <button type="submit" class="btn btn-block btn btn-primary" style="background-color:red">Sign up!</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <!--Two Company Front Squares-->
+        <div id="twoCompany">
+          <div class="row">
+            <div class="col-lg-6 portfolio-item">
+              <div class="card h-100">
+                <a href="http://natasha.ph/012018.asp" target="_blank"><img class="card-img-top" src="/static/img/2_Front_pics_/natashaFront.jpeg" alt="Natasha Picture of Frontpage"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="http://natasha.ph/012018.asp" target="_blank">
+                      Latest Natasha Catalog
+                  </h4>
+                  <p class="card-text"></p></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 portfolio-item">
+              <div class="card h-100">
+                <a href="http://mse.com.ph/022018.asp" target="_blank"><img class="card-img-top" src="/static/img/2_Front_pics_/mseFront4.jpeg" alt="Mse Picture of Frontpage"></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="http://mse.com.ph/022018.asp" target="_blank">
+                      Latest MSE Catalog
+                  </h4>
+                  <p class="card-text"></p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- Portfolio -->
+      <br>
+      <div class="container" class="content-section" id="portfolio">
+        <div class="content-section-heading text-center">
+          <h5 class="text-secondary mb-0">Products for you</h5>
+          <h4 class="mb-5">Top Sellers</h4>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2></h2>
+                  <p class="mb-0">"Fashion is just another accessory for someone with great style!""</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="/static/img/rect_1.png" alt="Natasha products Picture">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2></h2>
+                  <p class="mb-0">"Think, Act, Love,Speak, Dress like a Gentleman!"</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="/static/img/rect_2.png" alt="Mse Products Picture">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2></h2>
+                  <p class="mb-0">"There is only one pretty child in the world and every mother has it!"</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="/static/img/rect_3.png" alt="Picture of Mse Kids Products">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2></h2>
+                  <p class="mb-0">"Collect things that you love that are authentic to you and your house becomes your story!"</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="/static/img/rect_4.png" alt="Pictures of Home Products">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    <!--Carousel Slow Pics -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" class="img-responsive" style="background-image: url('../static/img/carouselGadget.png')">
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" class="img-responsive" style="background-image: url('../static/img/carouselNatasha.png')">
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" class="img-responsive" style="background-image: url('../static/img/carouselMse.png')">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+        <!-- Team -->
+<section class="bg-light" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Companies we carry</h2>
+        <h3 class="section-subheading text-muted">Dropship with these amazing companies</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img src="{% static 'logoAndreaNew.png' %}" style="width:50%; height:50%">
+          <h4>Andrea Fashion Collection</h4>
+          <p class="text-muted"><a href="http://natasha.ph/about.asp" target="_blank">About Andrea</a></p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/watch?v=lyByDpp7hWQ" target="_blank">
+                <i class="fa fa-youtube"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/ethel.tantacuyan" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="mailto:etheltacuyan@outlook.com">
+                <i class="fa fa-envelope-o"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img src="/static/img/natashaLogo.png" style="width:40%; height:40%">
+          <h4>Natasha Direct Selling</h4>
+          <p class="text-muted"><a href="http://natasha.ph/about.asp" target="_blank">About Natasha</a></p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/watch?v=lyByDpp7hWQ" target="_blank">
+                <i class="fa fa-youtube"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/natashabusiness/" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="mailto:etheltacuyan@outlook.com">
+                <i class="fa fa-envelope-o"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img src="/static/img/mseLogo.jpg" alt="" style="width:30%; height:30%">
+          <h4>Marikina Shoe Exchange</h4>
+          <p class="text-muted"><a href="http://mse.com.ph/about.asp" target="_blank">About MSE</a></p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/watch?v=lyByDpp7hWQ" target="_blank">
+                <i class="fa fa-youtube"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/MSEBusiness/" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="mailto:etheltacuyan@outlook.com">
+                <i class="fa fa-envelope-o"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/stylish-portfolio.min.js' %}"></script>
+    <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'js/contact_me.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/freelancer.min.js' %}"></script>
+    <script src="{% static 'js/agency.min.js' %}"></script>
+    {% render_block "js" %}
+  </body>
+
+</html>
